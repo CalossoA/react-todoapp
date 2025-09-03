@@ -32,6 +32,14 @@ app.use('/api/todos', authMiddleware, todoRoutes);
 // //     res.status(500).json({ error: "Database query failed" });
 // //   }
 // // });
+
+// Serve la build React
+const path = require('path');
+app.use(express.static(path.join(__dirname, '../todolist/build')));
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../todolist/build/index.html'));
+});
+
 const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
