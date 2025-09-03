@@ -33,11 +33,13 @@ app.use('/api/todos', authMiddleware, todoRoutes);
 // //   }
 // // });
 
-// Serve la build React
+
+// Serve la build React in modo compatibile con Railway/Node 22
 const path = require('path');
-app.use(express.static(path.join(__dirname, '../todolist/build')));
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../todolist/build/index.html'));
+const buildPath = path.join(process.cwd(), 'todolist', 'build');
+app.use(express.static(buildPath));
+app.get(/^\/(?!api).*/, (req, res) => {
+  res.sendFile(path.join(buildPath, 'index.html'));
 });
 
 const PORT = process.env.PORT || 4000;
