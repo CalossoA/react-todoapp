@@ -1,0 +1,94 @@
+.list-group {
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  border-radius: 0.75rem;
+}
+
+.list-group-item {
+  font-size: 1.1rem;
+  padding: 0.75rem 1.25rem;
+  background: #f9fbfd;
+  border: none;
+  border-bottom: 1px solid #e9ecef;
+  transition: background 0.2s;
+}
+
+.list-group-item.bg-white {
+  background: #fff;
+}
+
+.list-group-item.bg-light {
+  background: #f3f4f6;
+}
+
+.list-group-item:last-child {
+  border-bottom: none;
+}
+
+h4 {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+}
+
+.text-primary {
+  color: #2563eb !important;
+}
+
+.text-secondary {
+  color: #6c757d !important;
+}
+
+.text-decoration-line-through {
+  text-decoration: line-through;
+}
+
+body {
+  background: #f8fafc;
+  font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+}
+
+.card {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+}
+
+.fw-bold {
+  font-weight: bold;
+}
+
+.fw-semibold {
+  font-weight: 600;
+}
+
+.btn-outline-success {
+  border-radius: 50px;
+}
+
+.btn-outline-danger {
+  border-radius: 50px;
+}
+
+.list-group-item {
+  font-size: 1.1rem;
+  padding: 0.75rem 1.25rem;
+  background: #f9fbfd;
+  border: none;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.list-group-item:last-child {
+  border-bottom: none;
+}
+
+.text-primary {
+  color: #2563eb !important;
+}
+
+.text-secondary {
+  color: #6c757d !important;
+}
+
+.text-decoration-line-through {
+  text-decoration: line-through;
+}
