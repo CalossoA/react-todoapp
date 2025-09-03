@@ -36,7 +36,8 @@ app.use('/api/todos', authMiddleware, todoRoutes);
 // Serve la build React
 const path = require('path');
 app.use(express.static(path.join(__dirname, '../todolist/build')));
-app.get('*', (req, res) => {
+// Serve la React app solo per richieste non-API
+app.get(/^\/(?!api).*/, (req, res) => {
   res.sendFile(path.join(__dirname, '../todolist/build/index.html'));
 });
 
